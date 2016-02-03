@@ -1,4 +1,5 @@
-DROP TABLE users;
+DROP TABLE IF EXISTS users;
+DROP SEQUENCE IF EXISTS users_id_seq;
 
 CREATE SEQUENCE users_id_seq;
 

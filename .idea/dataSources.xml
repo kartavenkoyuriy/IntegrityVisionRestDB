@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1018682881">
+  <component name="DataSourceManagerImpl" format="xml" hash="1558935749">
     <data-source source="LOCAL" name="PostgreSQL - IntegrityVisionDB@localhost" uuid="cd26b7bf-fdc2-4167-a44a-e9e9cea6f567">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

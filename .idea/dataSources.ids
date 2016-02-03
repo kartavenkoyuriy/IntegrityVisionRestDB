@@ -1570,12 +1570,11 @@
       <column name="definition" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="users" schema="public" catalog="IntegrityVisionDB" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcnNfaWRfc2VxMSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <column name="firstname" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_login_on" sqlType="date" precision="13" scale="0" nullable="false" jdbcType="91"/>
-      <column name="lastname" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="login" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="users_pkey" columns="id"/>
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcnNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="login" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="firstname" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastname" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_login_on" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
     </table>
     <table name="users_id_seq" schema="public" catalog="IntegrityVisionDB" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

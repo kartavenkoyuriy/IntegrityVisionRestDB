@@ -13,7 +13,7 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     String FIND_BY_ADDRESS_QUERY = "SELECT u FROM User u WHERE u.lastLogOn = :date";
-    String FIND_BY_NAME = "SELECT u FROM User u WHERE u.firstName LIKE :name";
+    String FIND_BY_NAME = "SELECT u FROM User u WHERE u.firstName = :name";
 
     @Query(FIND_BY_ADDRESS_QUERY)
     List<User> getUsersByDate(@Param("date") Date date);
