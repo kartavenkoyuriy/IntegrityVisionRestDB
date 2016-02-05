@@ -15,30 +15,18 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User getUserById(int id) {
-        return userRepository.findOne(id);
-    }
-
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
-
-    public List<User> getUsersByDate(Date date) {
-        return userRepository.getUsersByDate(date);
-    }
-
-    public List<User> getUsersByName(String name) {
-        return userRepository.getUsersByName(name);
+    public List<User> getUsersByDateWithLimit(Date date, int limit) {
+        return userRepository.getUsersByDateWithLimit(date, limit);
     }
 
     @Transactional
     public User updateUser(User user) {//TODO:insert and update?
-        return userRepository.save(user);
+        return userRepository.updateUser(user);
     }
 
     @Transactional
     public User insertUser(User user) {
-        return userRepository.save(user);
+        return userRepository.insertUser(user);
     }
 
 }

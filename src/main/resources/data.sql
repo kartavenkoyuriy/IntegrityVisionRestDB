@@ -997,3 +997,4 @@ INSERT INTO USERS(login,firstname,lastname,last_login_on) VALUES('Maximillia','B
 INSERT INTO USERS(login,firstname,lastname,last_login_on) VALUES('Joan','Willow','Bella','04.06.2010 19:59');
 INSERT INTO USERS(login,firstname,lastname,last_login_on) VALUES('Maryam_Lind','Mallie','Kraig','13.05.2013 5:44');
 INSERT INTO USERS(login,firstname,lastname,last_login_on) VALUES('Dejon','Jerrod','Jillian','30.08.2011 8:36');
+INSERT INTO USERS(login,firstname,lastname,last_login_on) VALUES('Jon','Rod','Jil','30.01.2014 5:36');

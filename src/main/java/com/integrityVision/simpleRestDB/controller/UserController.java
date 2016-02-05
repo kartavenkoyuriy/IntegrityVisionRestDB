@@ -14,24 +14,9 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
-    public List<User> getAllUsers(){
-        return userService.getAllUsers();
-    }
-
-    @RequestMapping(value = "/getUserById", method = RequestMethod.GET)
-    public User getUserById(@RequestParam("id")int id){
-        return userService.getUserById(id);
-    }
-
-    @RequestMapping(value = "/searchByName", method = RequestMethod.GET)
-    public List<User> getUsersByName(@RequestParam("nameFilter") String name) {
-        return userService.getUsersByName(name);
-    }
-
     @RequestMapping(value = "/searchByDate", method = RequestMethod.GET)
-    public List<User> getUsersByDate(@RequestParam("dateFilter") Date date) {
-        return userService.getUsersByDate(date);
+    public List<User> getUsersByDate(@RequestParam("date") Date date, @RequestParam("limit") int limit) {
+        return userService.getUsersByDateWithLimit(date, limit);
     }
 
     @RequestMapping(value = "/updateUser", method = RequestMethod.PUT)

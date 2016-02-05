@@ -22,6 +22,13 @@ public class User {
     public User() {
     }
 
+    public User(String login, String firstName, String lastName, Date lastLogOn) {
+        this.login = login;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.lastLogOn = lastLogOn;
+    }
+
     public User(Integer id, String login, String firstName, String lastName, Date lastLogOn) {
         this.id = id;
         this.login = login;
@@ -29,6 +36,10 @@ public class User {
         this.lastName = lastName;
         this.lastLogOn = lastLogOn;
     }
+
+
+
+
 
     public Integer getId() {
         return id;
