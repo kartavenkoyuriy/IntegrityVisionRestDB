@@ -2,6 +2,7 @@ package com.integrityVision.simpleRestDB.entity;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name = "users")
@@ -37,10 +38,6 @@ public class User {
         this.lastLogOn = lastLogOn;
     }
 
-
-
-
-
     public Integer getId() {
         return id;
     }
@@ -59,6 +56,43 @@ public class User {
 
     public Date getLastLogOn() {
         return lastLogOn;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setLastLogOn(Date lastLogOn) {
+        this.lastLogOn = lastLogOn;
+    }
+
+    public String toJsonStringWithId(){
+        String dateToString = new SimpleDateFormat("yyyy-MM-dd").format(lastLogOn);
+        return "{" + "\"id\":\"" + id
+                + "\",\"login\":\"" + login
+                + "\",\"firstName\":\"" + firstName
+                + "\",\"lastName\":\"" + lastName
+                + "\",\"lastLogOn\":\"" + dateToString + "\"}";
+    }
+
+    public String toJsonStringWithoutId(){
+        String dateToString = new SimpleDateFormat("yyyy-MM-dd").format(lastLogOn);
+        return "{\"login\":\"" + login
+                + "\",\"firstName\":\"" + firstName
+                + "\",\"lastName\":\"" + lastName
+                + "\",\"lastLogOn\":\"" + dateToString + "\"}";
     }
 
     @Override
